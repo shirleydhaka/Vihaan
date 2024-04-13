@@ -1,0 +1,415 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #f0faff;
+}
+
+.nav-links {
+  display: none;
+}
+
+.navOpen .nav-links {
+  display: block;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 200px;
+  background: linear-gradient(135deg, #ffffff, #aaaacc);
+  box-shadow: 0 4px 10px rgb(111 111 111);
+}
+.navbar.sticky{
+    padding: 30px 0;
+    background: rgb(85, 85, 85);
+}
+.nav,
+.nav .nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  justify-content: space-between;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+.nav .logo {
+  font-size: 22px;
+  font-weight: 500;
+}
+.nav .nav-links {
+  column-gap: 20px;
+  list-style: none;
+}
+.nav .nav-links a {
+  transition: all 0.2s linear;
+}
+.nav.openSearch .nav-links a {
+  opacity: 0;
+  pointer-events: none;
+}
+.nav .search-icon {
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+}
+.nav .search-box {
+  position: absolute;
+  right: 250px;
+  height: 45px;
+  max-width: 555px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s linear;
+}
+.nav.openSearch .search-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+.search-box .search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  left: 15px;
+  color: #4a98f7;
+  transform: translateY(-50%);
+}
+.search-box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 0 15px 0 45px;
+}
+
+.nav .navOpenBtn,
+.nav .navCloseBtn {
+  display: none;
+}
+
+/* responsive */
+@media screen and (max-width: 1160px) {
+  .nav {
+    padding: 15px 100px;
+  }
+  .nav .search-box {
+    right: 150px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .nav {
+    padding: 15px 50px;
+  }
+  .nav .search-box {
+    right: 100px;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav .navOpenBtn,
+  .nav .navCloseBtn {
+    display: block;
+  }
+  .nav {
+    padding: 15px 20px;
+  }
+  .nav .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    max-width: 280px;
+    width: 100%;
+    padding-top: 100px;
+    row-gap: 30px;
+    flex-direction: column;
+    background-color:#7b78a1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    z-index: 100;
+  }
+  .nav.openNav .nav-links {
+    left: 0;
+  }
+  .nav .navOpenBtn {
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav .navCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav .search-box {
+    top: calc(100% + 10px);
+    max-width: calc(100% - 20px);
+    right: 50%;
+    transform: translateX(50%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: linear-gradient(135deg, #262a44, #7b72a7);
+  border: 1px solid #000000;
+  padding: 10px;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a box shadow for depth */
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu ul li {
+  margin-bottom: 5px;
+}
+
+.dropdown-menu ul li a {
+  color: #ffffff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make anchor elements block-level for full width */
+}
+
+.dropdown-menu ul li a:hover {
+  background-color: #767676; /* Hover background color */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+.dropdown-menu-1 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -150px; /* Adjust this value according to your design */
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dropdown-menu-1 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu-1 ul li {
+  margin-bottom: 10px;
+}
+
+.dropdown-menu-1 ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.basketball:hover + .dropdown-menu-1 {
+  display: block;
+}
+
+/* live news css */
+.containers{ 
+  display: flex;
+  align-items: center; 
+  background: #eee;
+  margin-top: 63px;
+}
+.containers span{ 
+  position: relative; 
+  display: inline-block; 
+  flex-shrink: 0; 
+  padding: 8px 20px;
+  background: #f00;
+  color: #fff;
+  overflow: hidden; 
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+}
+.scroll-left span{ 
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+}
+.home {
+  margin-top: 50px; /* Adjust according to the height of your navigation bar */
+  /* Add any additional styling for your home section here */
+}
+
+
+@keyframes scroll-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 568px) {
+    .containers {
+        display: none; /* Hide the container on smaller screens */
+        /* Add any other styles you want to apply on smaller screens */
+    }
+}
+
+.home{
+  background: url(bg.png)  no-repeat center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 135vh;
+}
+
+.text{
+  margin-top: 160px;
+}
+.text h2{
+  margin-top: 20px;
+  margin-left: 45px;
+  font-weight: bold;
+  font-size: 110px;
+  font-family: "Montserrat", sans-serif;
+}
+.text h3{
+  font-size: 50px;
+}
+.text p{
+  margin-left: 45px;
+  font-size: 21px;
+}
+
+
+
+.section-title h2{
+    font-size: 35px;
+    font-weight: 600;
+  }
+@media screen and (max-width: 768px) {
+    .section-title h2 {
+        font-size: 31px;
+        margin-bottom: 27px;
+        margin-left: 83px;
+    }
+}
+
+.schedule_img img {
+  width: 40%;
+  height: auto;
+  display: block;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+.schedule_img-2 img {
+  margin-left: 655px;
+  width: 40%;
+  height: auto;
+  display: block;
+  margin-top: -503.5px;
+}
+
+@media screen and (max-width: 768px) {
+    .schedule_img img {
+        max-width: 100%;
+        height: auto;
+        margin-left: 58px;
+        width: 58%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .schedule_img-2 img {
+        max-width: 100%;
+        height: auto;
+        margin-left: 60px;
+        margin-top: 27px;
+        width: 57%;
+    }
+}
+
+
+
+/* MEDICAL ASPECT */
+.medical_Aspect {
+  background-color: #f2f2f2;
+  padding: 70px;
+  width: 101%;
+  margin: 0 auto;
+  margin-top: 73px;
+}
+
+/* Style for the heading */
+.medical_Aspect h2 {
+  color: #333;
+  text-align: center;
+  font-size: 34px;
+}
+
+/* Style for the paragraph */
+.medical_Aspect p {
+  color: #555;
+  text-align: center;
+  font-size: 21px;
+}
+
+/* Style for the submit button */
+.medical_Aspect input[type="enter"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  margin-left: 530px;
+  width: 6%;
+  margin-top: 12px;
+}
+
+
+/* Style for the submit button on hover */
+.medical_Aspect input[type="enter"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Media query for the medical_Aspect section */
+@media screen and (max-width: 768px) {
+  /* Styles to apply when the screen width is 768px or less */
+  .medical_Aspect {
+    /* Apply styles specifically to the medical_Aspect section */
+    /* For example, adjust padding */
+    padding: 20px;
+  }
+  
+  .medical_Aspect h2 {
+    /* Apply styles specifically to the h2 element within the medical_Aspect section */
+    /* For example, decrease font size */
+    font-size: 18px;
+  }
+  
+  .medical_Aspect p {
+    /* Apply styles specifically to the p element within the medical_Aspect section */
+    /* For example, decrease font size */
+    font-size: 14px;
+  }
+
+  .medical_Aspect input[type="enter"] {
+    padding: 10px 20px;
+    margin-left: 150px;
+  }
+}
