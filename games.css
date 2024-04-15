@@ -410,6 +410,7 @@ a {
 
   .medical_Aspect input[type="enter"] {
     padding: 10px 20px;
-    margin-left: 150px;
+    margin-left: 137px;
+    width: 22%;
   }
 }
